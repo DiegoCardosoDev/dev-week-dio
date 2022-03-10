@@ -1,4 +1,4 @@
-package com.diegocardoso.devweek.models;
+package com.diegocardoso.devweek.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

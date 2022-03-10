@@ -2,7 +2,7 @@ package com.diegocardoso.devweek.service;
 
 
 
-import com.diegocardoso.devweek.models.IncidenciaExame;
+import com.diegocardoso.devweek.entities.IncidenciaExame;
 import com.diegocardoso.devweek.repo.OcorrenciaRepo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

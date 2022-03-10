@@ -1,4 +1,4 @@
-package com.diegocardoso.devweek.models;
+package com.diegocardoso.devweek.entities;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;

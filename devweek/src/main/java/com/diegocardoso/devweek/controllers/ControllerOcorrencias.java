@@ -1,7 +1,7 @@
 package com.diegocardoso.devweek.controllers;
 
 
-import com.diegocardoso.devweek.models.Response;
+import com.diegocardoso.devweek.entities.Response;
 import com.diegocardoso.devweek.service.OcorrenciasService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;

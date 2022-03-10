@@ -1,6 +1,6 @@
 package com.diegocardoso.devweek.service;
 
-import com.diegocardoso.devweek.models.FaixaEtaria;
+import com.diegocardoso.devweek.entities.FaixaEtaria;
 import com.diegocardoso.devweek.repo.FaixaEtariaRepo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

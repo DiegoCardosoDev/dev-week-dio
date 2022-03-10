@@ -1,4 +1,4 @@
-package com.diegocardoso.devweek.models;
+package com.diegocardoso.devweek.entities;
 
 
 import lombok.AllArgsConstructor;
@@ -12,13 +12,12 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Data
 @Entity
-public class IncidenciaExame {
+public class FaixaEtaria {
 
     @Id @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(nullable = false, updatable = false)
     private Long id;
-    private Integer Regiao_id;
-    private Integer Mes;
-    private Long Faixa_id;
-    private Integer Qnt_exames;
+    private Integer Faixa_i;
+    private Integer Faixa_n;
+    private String Descricao;
 }
