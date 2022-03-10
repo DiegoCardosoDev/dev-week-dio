@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.List;
-import java.util.Optional;
 
 @Transactional
 @Slf4j
@@ -22,24 +21,29 @@ public class FaixaEtariaService {
 
     /*LISTAR TODOS*/
     public List<FaixaEtaria>  findAllFaixaEtaria(){
+        log.info("listando todas faixas etarias...");
         return faixaEtariaRepo.findAll();
     }
 
     /*OBTER POR ID*/
-    public Optional<FaixaEtaria> findByIdFaixaEtaria(Long id){
-        return faixaEtariaRepo.findById(id);
+    public FaixaEtaria findByIdFaixaEtaria(Long id) {
+        log.info("faixa etaria  id: {}", id);
+        return faixaEtariaRepo.findById(id).get();
     }
 
     /*SALVAR */
     @Transactional
     public FaixaEtaria save(FaixaEtaria faixaEtaria) {
+        log.info("criando nova faixa etaria: {}", faixaEtaria.getDescricao());
         return faixaEtariaRepo.save(faixaEtaria);
     }
 
     /*DELETAR*/
     @Transactional
-    public void delete(FaixaEtaria faixaEtaria) {
-        faixaEtariaRepo.delete(faixaEtaria);
+    public Boolean delete(Long id) {
+        log.info("deleting faixa etaria by id {}", id);
+        faixaEtariaRepo.deleteById(id);
+        return Boolean.TRUE;
     }
 
 
