@@ -4,7 +4,6 @@ import com.diegocardoso.devweek.models.FaixaEtaria;
 import com.diegocardoso.devweek.repo.FaixaEtariaRepo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-
 import javax.transaction.Transactional;
 import java.util.List;
 
@@ -19,26 +18,26 @@ public class FaixaEtariaService {
         this.faixaEtariaRepo = faixaEtariaRepo;
     }
 
-    /*LISTAR TODOS*/
+    /*LISTAR TODAS FAIXAS ETARIAS*/
     public List<FaixaEtaria>  findAllFaixaEtaria(){
         log.info("listando todas faixas etarias...");
         return faixaEtariaRepo.findAll();
     }
 
-    /*OBTER POR ID*/
+    /*OBTER FAIXA ETARIA POR ID*/
     public FaixaEtaria findByIdFaixaEtaria(Long id) {
         log.info("faixa etaria  id: {}", id);
         return faixaEtariaRepo.findById(id).get();
     }
 
-    /*SALVAR */
+    /*SALVAR FAIXA ETARIA */
     @Transactional
     public FaixaEtaria save(FaixaEtaria faixaEtaria) {
         log.info("criando nova faixa etaria: {}", faixaEtaria.getDescricao());
         return faixaEtariaRepo.save(faixaEtaria);
     }
 
-    /*DELETAR*/
+    /*DELETAR FAIXA ETARIA*/
     @Transactional
     public Boolean delete(Long id) {
         log.info("deleting faixa etaria by id {}", id);

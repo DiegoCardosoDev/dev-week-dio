@@ -6,9 +6,7 @@ import com.diegocardoso.devweek.service.FaixaEtariaService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import javax.validation.Valid;
-
 import static java.time.LocalDateTime.now;
 import static org.springframework.http.HttpStatus.CREATED;
 import static org.springframework.http.HttpStatus.OK;
@@ -27,7 +25,7 @@ public class ControllerFaixaEtaria {
 
     /*LISTAR TODOS*/
     @GetMapping("/faixas-etarias")
-    public ResponseEntity<Response>  allFaixaEtaria() throws InterruptedException{
+    public ResponseEntity<Response>  allFaixaEtaria() {
 
         return ResponseEntity.ok(
                 Response.builder()

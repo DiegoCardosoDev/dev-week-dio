@@ -21,14 +21,14 @@ public class OcorrenciasService {
         this.ocorrenciaRepo = ocorrenciaRepo;
     }
 
-    /*LISTAR TODOS*/
+    /*LISTAR TODAS*/
     public List<IncidenciaExame>  findAllOcorrencias(){
         log.info("listando todas ocorrencias...");
         return ocorrenciaRepo.findAll();
     }
 
 
-    /*OBTER POR ID*/
+    /*OBTER  OCORRENCIA POR ID*/
     public IncidenciaExame  findOcorrenciasById(Long id) {
         Optional<IncidenciaExame> ocorrenciaOptional = ocorrenciaRepo.findById(id);
         if (ocorrenciaOptional.isPresent()){
