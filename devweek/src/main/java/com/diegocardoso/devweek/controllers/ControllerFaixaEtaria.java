@@ -61,7 +61,7 @@ public class ControllerFaixaEtaria {
         return ResponseEntity.ok(
                 Response.builder()
                         .timeStamp(now())
-                        .data(Map.of("server", faixaEtariaService.save(faixaEtaria)))
+                        .data(Map.of("salvando...", faixaEtariaService.save(faixaEtaria)))
                         .message("Server created")
                         .status(CREATED)
                         .statusCode(CREATED.value())
